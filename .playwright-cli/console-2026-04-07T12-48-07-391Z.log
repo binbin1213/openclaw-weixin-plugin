@@ -1,0 +1,7 @@
+[   10714ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://unpkg.com/prismjs@1.30.0/components/prism-typescript.min.js:0
+[   12093ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu3cOWxw.woff2 @ https://binbin1213.github.io/openclaw-weixin-plugin/:0
+[   12788ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/sourcesanspro/v23/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2 @ https://binbin1213.github.io/openclaw-weixin-plugin/#/:0
+[   13242ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://binbin1213.github.io/openclaw-weixin-plugin/docs/README.md:0
+[   13478ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://binbin1213.github.io/favicon.ico:0
+[   13710ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://binbin1213.github.io/openclaw-weixin-plugin/docs/_404.md:0
+[   13737ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2 @ https://binbin1213.github.io/openclaw-weixin-plugin/#/:0

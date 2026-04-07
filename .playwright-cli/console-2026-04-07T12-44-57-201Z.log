@@ -1,0 +1,8 @@
+[    1830ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css:0
+[    1830ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js:0
+[    1844ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js:0
+[    1844ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js:0
+[    1844ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js:0
+[    1844ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js:0
+[    1844ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js:0
+[    2332ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://binbin1213.github.io/favicon.ico:0
