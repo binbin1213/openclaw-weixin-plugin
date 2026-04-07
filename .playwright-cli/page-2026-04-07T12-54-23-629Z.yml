@@ -1,0 +1,392 @@
+- generic [ref=e1]:
+  - link "View source on Github" [ref=e2] [cursor=pointer]:
+    - /url: https://github.com/binbin1213/openclaw-weixin-plugin
+    - img [ref=e3]
+  - main [ref=e7]:
+    - button "Menu" [active] [ref=e8] [cursor=pointer]
+    - complementary [ref=e13]:
+      - heading "OpenClaw 微信插件" [level=1] [ref=e14]:
+        - link "OpenClaw 微信插件" [ref=e15] [cursor=pointer]:
+          - /url: /openclaw-weixin-plugin/
+    - article [ref=e18]:
+      - paragraph [ref=e19]: 本页面提供 OpenClaw 微信插件的整体架构概览，帮助开发者快速理解项目结构、核心功能模块及各组件之间的关系。OpenClaw 微信插件是一个基于 HTTP JSON API 的微信渠道插件，支持通过扫码完成登录授权，实现与微信生态的无缝对接。
+      - heading "项目定位" [level=2] [ref=e20]:
+        - link "项目定位" [ref=e21] [cursor=pointer]:
+          - /url: "#/?id=%e9%a1%b9%e7%9b%ae%e5%ae%9a%e4%bd%8d"
+      - paragraph [ref=e22]:
+        - text: OpenClaw 微信插件是 OpenClaw 生态系统的官方微信渠道组件，旨在为开发者提供稳定、高效的微信集成方案。插件采用长轮询（long-polling）机制获取消息，通过
+        - code [ref=e23]: sendMessage
+        - text: API 发送消息，并完整支持文本、图片、视频、文件等多种媒体类型的上传与下载。插件内置了
+        - strong [ref=e24]: 多账号管理
+        - text: 、
+        - strong [ref=e25]: 会话状态保持
+        - text: 、
+        - strong [ref=e26]: SILK 语音转码
+        - text: 、
+        - strong [ref=e27]: AES-128-ECB 加密
+        - text: 等企业级特性，适用于生产环境部署。
+      - paragraph [ref=e28]:
+        - text: 当前版本为
+        - strong [ref=e29]: 2.1.7
+        - text: ，要求 Node.js >=22，并与 OpenClaw 2026.3.22+ 版本完全兼容。插件在启动时会执行版本兼容性检查，如果运行的 OpenClaw 版本超出支持范围，插件将拒绝加载。
+      - paragraph [ref=e30]:
+        - text: "Sources:"
+        - link "package.json" [ref=e31] [cursor=pointer]:
+          - /url: "#/package.json?id=l1-l60"
+      - heading "技术架构总览" [level=2] [ref=e32]:
+        - link "技术架构总览" [ref=e33] [cursor=pointer]:
+          - /url: "#/?id=%e6%8a%80%e6%9c%af%e6%9e%b6%e6%9e%84%e6%80%bb%e8%a7%88"
+      - paragraph [ref=e34]: 项目采用模块化架构设计，核心职责清晰分离。下图展示了插件的主要模块及其交互关系：
+      - generic [ref=e35]:
+        - code [ref=e36]:
+          - text: graph TB subgraph "插件入口" A[index.ts
+          - generic [ref=e37]:
+            - generic [ref=e38]: <br
+            - text: />
+          - text: 插件注册] A --> B[compat.ts
+          - generic [ref=e39]:
+            - generic [ref=e40]: <br
+            - text: />
+          - text: 版本检查] A --> C[runtime.ts
+          - generic [ref=e41]:
+            - generic [ref=e42]: <br
+            - text: />
+          - text: 运行时管理] end subgraph "认证授权" D[auth/accounts.ts
+          - generic [ref=e43]:
+            - generic [ref=e44]: <br
+            - text: />
+          - text: 账号存储] E[auth/login-qr.ts
+          - generic [ref=e45]:
+            - generic [ref=e46]: <br
+            - text: />
+          - text: 二维码登录] F[auth/pairing.ts
+          - generic [ref=e47]:
+            - generic [ref=e48]: <br
+            - text: />
+          - text: 配对授权] end subgraph "API 通信" G[api/api.ts
+          - generic [ref=e49]:
+            - generic [ref=e50]: <br
+            - text: />
+          - text: HTTP 请求封装] H[api/session-guard.ts
+          - generic [ref=e51]:
+            - generic [ref=e52]: <br
+            - text: />
+          - text: 会话管理] I[api/config-cache.ts
+          - generic [ref=e53]:
+            - generic [ref=e54]: <br
+            - text: />
+          - text: 配置缓存] J[api/types.ts
+          - generic [ref=e55]:
+            - generic [ref=e56]: <br
+            - text: />
+          - text: 类型定义] end subgraph "消息处理" K[messaging/process-message.ts
+          - generic [ref=e57]:
+            - generic [ref=e58]: <br
+            - text: />
+          - text: 消息路由] L[messaging/inbound.ts
+          - generic [ref=e59]:
+            - generic [ref=e60]: <br
+            - text: />
+          - text: 入站处理] M[messaging/send.ts
+          - generic [ref=e61]:
+            - generic [ref=e62]: <br
+            - text: />
+          - text: 消息发送] N[messaging/send-media.ts
+          - generic [ref=e63]:
+            - generic [ref=e64]: <br
+            - text: />
+          - text: 媒体发送] end subgraph "CDN 与加密" O[cdn/cdn-upload.ts
+          - generic [ref=e65]:
+            - generic [ref=e66]: <br
+            - text: />
+          - text: CDN 上传] P[cdn/aes-ecb.ts
+          - generic [ref=e67]:
+            - generic [ref=e68]: <br
+            - text: />
+          - text: AES 加密] Q[cdn/pic-decrypt.ts
+          - generic [ref=e69]:
+            - generic [ref=e70]: <br
+            - text: />
+          - text: 图片解密] end subgraph "媒体处理" R[media/media-download.ts
+          - generic [ref=e71]:
+            - generic [ref=e72]: <br
+            - text: />
+          - text: 媒体下载] S[media/silk-transcode.ts
+          - generic [ref=e73]:
+            - generic [ref=e74]: <br
+            - text: />
+          - text: SILK 转码] T[media/mime.ts
+          - generic [ref=e75]:
+            - generic [ref=e76]: <br
+            - text: />
+          - text: MIME 识别] end subgraph "监控与存储" U[monitor/monitor.ts
+          - generic [ref=e77]:
+            - generic [ref=e78]: <br
+            - text: />
+          - text: 长轮询监控] V[storage/sync-buf.ts
+          - generic [ref=e79]:
+            - generic [ref=e80]: <br
+            - text: />
+          - text: 同步游标] W[storage/state-dir.ts
+          - generic [ref=e81]:
+            - generic [ref=e82]: <br
+            - text: />
+          - text: 状态目录] end subgraph "工具模块" X[util/logger.ts
+          - generic [ref=e83]:
+            - generic [ref=e84]: <br
+            - text: />
+          - text: 日志系统] Y[util/random.ts
+          - generic [ref=e85]:
+            - generic [ref=e86]: <br
+            - text: />
+          - text: 随机工具] Z[util/redact.ts
+          - generic [ref=e87]:
+            - generic [ref=e88]: <br
+            - text: />
+          - text: 脱敏处理] end A --> G U --> G G --> H G --> I K --> L K --> M K --> N M --> O O --> P N --> Q N --> R R --> S R --> T U --> V U --> X D --> X E --> X
+        - text: mermaid
+      - paragraph [ref=e89]: 该架构体现了关注点分离的设计原则：认证授权专注于登录流程，API 模块处理网络通信，消息处理模块负责业务逻辑，CDN 和媒体模块处理底层媒体操作，监控与存储模块保障系统稳定运行。
+      - paragraph [ref=e90]:
+        - text: "Sources:"
+        - link "index.ts" [ref=e91] [cursor=pointer]:
+          - /url: "#/index.ts?id=l1-l25"
+        - text: ","
+        - link "src/channel.ts" [ref=e92] [cursor=pointer]:
+          - /url: "#/src/channel.ts?id=l1-l200"
+        - text: ","
+        - link "src/monitor/monitor.ts" [ref=e93] [cursor=pointer]:
+          - /url: "#/src/monitor/monitor.ts?id=l1-l200"
+      - heading "核心功能特性" [level=2] [ref=e94]:
+        - link "核心功能特性" [ref=e95] [cursor=pointer]:
+          - /url: "#/?id=%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd%e7%89%b9%e6%80%a7"
+      - paragraph [ref=e96]: 插件提供以下核心功能，这些特性构成了微信渠道的完整功能矩阵：
+      - table [ref=e97]:
+        - rowgroup [ref=e98]:
+          - row "功能类别 特性名称 说明 支持状态" [ref=e99]:
+            - columnheader "功能类别" [ref=e100]
+            - columnheader "特性名称" [ref=e101]
+            - columnheader "说明" [ref=e102]
+            - columnheader "支持状态" [ref=e103]
+        - rowgroup [ref=e104]:
+          - row "认证授权 二维码登录 通过手机微信扫码完成授权，登录凭证自动保存到本地 ✅ 完整支持" [ref=e105]:
+            - cell "认证授权" [ref=e106]:
+              - strong [ref=e107]: 认证授权
+            - cell "二维码登录" [ref=e108]
+            - cell "通过手机微信扫码完成授权，登录凭证自动保存到本地" [ref=e109]
+            - cell "✅ 完整支持" [ref=e110]
+          - row "多账号管理 支持多个微信号同时登录，每个账号独立存储 ✅ 完整支持" [ref=e111]:
+            - cell [ref=e112]
+            - cell "多账号管理" [ref=e113]
+            - cell "支持多个微信号同时登录，每个账号独立存储" [ref=e114]
+            - cell "✅ 完整支持" [ref=e115]
+          - row "会话过期处理 检测会话过期（errcode -14），自动暂停并重试 ✅ 完整支持" [ref=e116]:
+            - cell [ref=e117]
+            - cell "会话过期处理" [ref=e118]
+            - cell "检测会话过期（errcode -14），自动暂停并重试" [ref=e119]
+            - cell "✅ 完整支持" [ref=e120]
+          - row "消息通信 长轮询获取 基于 getUpdates API 的长轮询机制，超时默认 35 秒 ✅ 完整支持" [ref=e121]:
+            - cell "消息通信" [ref=e122]:
+              - strong [ref=e123]: 消息通信
+            - cell "长轮询获取" [ref=e124]
+            - cell "基于 getUpdates API 的长轮询机制，超时默认 35 秒" [ref=e125]
+            - cell "✅ 完整支持" [ref=e126]
+          - row "消息发送 支持 sendMessage API，可发送文本及多种媒体类型 ✅ 完整支持" [ref=e127]:
+            - cell [ref=e128]
+            - cell "消息发送" [ref=e129]
+            - cell "支持 sendMessage API，可发送文本及多种媒体类型" [ref=e130]
+            - cell "✅ 完整支持" [ref=e131]
+          - row "Markdown 过滤 发送消息时自动过滤 Markdown 语法，避免格式错误 ✅ 完整支持" [ref=e132]:
+            - cell [ref=e133]
+            - cell "Markdown 过滤" [ref=e134]
+            - cell "发送消息时自动过滤 Markdown 语法，避免格式错误" [ref=e135]
+            - cell "✅ 完整支持" [ref=e136]
+          - row "斜杠命令 支持斜杠命令快速交互 ✅ 完整支持" [ref=e137]:
+            - cell [ref=e138]
+            - cell "斜杠命令" [ref=e139]
+            - cell "支持斜杠命令快速交互" [ref=e140]
+            - cell "✅ 完整支持" [ref=e141]
+          - row "媒体处理 CDN 上传 先获取预签名 URL，再上传加密后的文件 ✅ 完整支持" [ref=e142]:
+            - cell "媒体处理" [ref=e143]:
+              - strong [ref=e144]: 媒体处理
+            - cell "CDN 上传" [ref=e145]
+            - cell "先获取预签名 URL，再上传加密后的文件" [ref=e146]
+            - cell "✅ 完整支持" [ref=e147]
+          - row "AES-128-ECB 加密 媒体文件上传前自动加密，符合微信安全规范 ✅ 完整支持" [ref=e148]:
+            - cell [ref=e149]
+            - cell "AES-128-ECB 加密" [ref=e150]
+            - cell "媒体文件上传前自动加密，符合微信安全规范" [ref=e151]
+            - cell "✅ 完整支持" [ref=e152]
+          - row "媒体下载与解密 下载远程媒体并解密到本地临时文件 ✅ 完整支持" [ref=e153]:
+            - cell [ref=e154]
+            - cell "媒体下载与解密" [ref=e155]
+            - cell "下载远程媒体并解密到本地临时文件" [ref=e156]
+            - cell "✅ 完整支持" [ref=e157]
+          - row "SILK 语音转码 将 SILK 格式语音转换为 WAV/PCM ✅ 完整支持" [ref=e158]:
+            - cell [ref=e159]
+            - cell "SILK 语音转码" [ref=e160]
+            - cell "将 SILK 格式语音转换为 WAV/PCM" [ref=e161]
+            - cell "✅ 完整支持" [ref=e162]
+          - row "MIME 类型识别 根据文件扩展名自动识别媒体类型 ✅ 完整支持" [ref=e163]:
+            - cell [ref=e164]
+            - cell "MIME 类型识别" [ref=e165]
+            - cell "根据文件扩展名自动识别媒体类型" [ref=e166]
+            - cell "✅ 完整支持" [ref=e167]
+          - row "系统特性 同步游标持久化 记录每次长轮询的同步游标，服务端重启后自动恢复 ✅ 完整支持" [ref=e168]:
+            - cell "系统特性" [ref=e169]:
+              - strong [ref=e170]: 系统特性
+            - cell "同步游标持久化" [ref=e171]
+            - cell "记录每次长轮询的同步游标，服务端重启后自动恢复" [ref=e172]
+            - cell "✅ 完整支持" [ref=e173]
+          - row "上下文令牌缓存 缓存每个会话的 contextToken，发送消息时自动匹配 ✅ 完整支持" [ref=e174]:
+            - cell [ref=e175]
+            - cell "上下文令牌缓存" [ref=e176]
+            - cell "缓存每个会话的 contextToken，发送消息时自动匹配" [ref=e177]
+            - cell "✅ 完整支持" [ref=e178]
+          - row "结构化日志 完整的日志系统，支持账号级别的日志追踪 ✅ 完整支持" [ref=e179]:
+            - cell [ref=e180]
+            - cell "结构化日志" [ref=e181]
+            - cell "完整的日志系统，支持账号级别的日志追踪" [ref=e182]
+            - cell "✅ 完整支持" [ref=e183]
+          - row "版本兼容性检查 启动时检查 OpenClaw 版本，拒绝不兼容版本 ✅ 完整支持" [ref=e184]:
+            - cell [ref=e185]
+            - cell "版本兼容性检查" [ref=e186]
+            - cell "启动时检查 OpenClaw 版本，拒绝不兼容版本" [ref=e187]
+            - cell "✅ 完整支持" [ref=e188]
+      - paragraph [ref=e189]:
+        - text: "Sources:"
+        - link "README.zh_CN.md" [ref=e190] [cursor=pointer]:
+          - /url: "#/README.zh_CN?id=l1-l100"
+        - text: ","
+        - link "src/monitor/monitor.ts" [ref=e191] [cursor=pointer]:
+          - /url: "#/src/monitor/monitor.ts?id=l1-l200"
+        - text: ","
+        - link "src/cdn/cdn-upload.ts" [ref=e192] [cursor=pointer]:
+          - /url: "#/src/cdn/cdn-upload.ts?id=l1-l88"
+      - heading "目录结构详解" [level=2] [ref=e193]:
+        - link "目录结构详解" [ref=e194] [cursor=pointer]:
+          - /url: "#/?id=%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84%e8%af%a6%e8%a7%a3"
+      - paragraph [ref=e195]: 项目的目录结构体现了模块化设计理念，每个目录负责特定的功能域：
+      - code [ref=e197]: "openclaw-weixin/ ├── index.ts # 插件入口，注册通道插件 ├── openclaw.plugin.json # 插件元数据配置 ├── package.json # npm 包配置与依赖声明 └── src/ ├── api/ # API 通信层 │ ├── api.ts # HTTP 请求封装（GET/POST） │ ├── config-cache.ts # 配置缓存管理器 │ ├── session-guard.ts # 会话状态管理与过期处理 │ └── types.ts # API 请求/响应类型定义 ├── auth/ # 认证授权模块 │ ├── accounts.ts # 账号存储与多账号管理 │ ├── login-qr.ts # 二维码登录流程实现 │ └── pairing.ts # 配对授权与白名单机制 ├── cdn/ # CDN 与加密模块 │ ├── aes-ecb.ts # AES-128-ECB 加密算法 │ ├── cdn-upload.ts # CDN 上传逻辑（带重试） │ ├── cdn-url.ts # CDN URL 构建工具 │ ├── pic-decrypt.ts # 图片解密实现 │ └── upload.ts # 统一上传入口 ├── media/ # 媒体处理模块 │ ├── media-download.ts # 媒体下载与解密 │ ├── mime.ts # MIME 类型识别 │ └── silk-transcode.ts # SILK 语音格式转码 ├── messaging/ # 消息处理模块 │ ├── debug-mode.ts # 调试模式与链路追踪 │ ├── error-notice.ts # 错误通知机制 │ ├── inbound.ts # 入站消息处理 │ ├── markdown-filter.ts # Markdown 文本过滤 │ ├── process-message.ts # 消息路由与分发 │ ├── send-media.ts # 媒体消息发送 │ ├── send.ts # 文本消息发送 │ └── slash-commands.ts # 斜杠命令处理 ├── monitor/ # 监控模块 │ └── monitor.ts # 长轮询监控循环实现 ├── storage/ # 存储模块 │ ├── state-dir.ts # 状态目录解析 │ └── sync-buf.ts # 同步游标持久化 ├── config/ # 配置管理 │ └── config-schema.ts # 配置 Schema 定义（Zod） ├── util/ # 工具函数 │ ├── logger.ts # 结构化日志系统 │ ├── random.ts # 随机数生成工具 │ └── redact.ts # 敏感信息脱敏 ├── channel.ts # 通道插件核心实现 ├── compat.ts # OpenClaw 版本兼容性检查 ├── runtime.ts # 插件运行时管理 └── vendor.d.ts # 第三方库类型声明"
+      - paragraph [ref=e198]:
+        - text: "Sources:"
+        - link "src/channel.ts" [ref=e199] [cursor=pointer]:
+          - /url: "#/src/channel.ts?id=l1-l460"
+        - text: ","
+        - link "src/auth/accounts.ts" [ref=e200] [cursor=pointer]:
+          - /url: "#/src/auth/accounts.ts?id=l1-l200"
+        - text: ","
+        - link "src/runtime.ts" [ref=e201] [cursor=pointer]:
+          - /url: "#/src/runtime.ts?id=l1-l71"
+      - heading "数据流与生命周期" [level=2] [ref=e202]:
+        - link "数据流与生命周期" [ref=e203] [cursor=pointer]:
+          - /url: "#/?id=%e6%95%b0%e6%8d%ae%e6%b5%81%e4%b8%8e%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f"
+      - paragraph [ref=e204]:
+        - text: 插件的核心数据流遵循
+        - strong [ref=e205]: 接收 → 处理 → 响应
+        - text: 的模式，下图展示了完整的消息生命周期：
+      - generic [ref=e206]:
+        - code [ref=e207]:
+          - text: sequenceDiagram participant User as 微信用户 participant Weixin as 微信网关 participant Monitor as monitor.ts
+          - generic [ref=e208]:
+            - generic [ref=e209]: <br
+            - text: />
+          - text: 监控循环 participant API as api.ts
+          - generic [ref=e210]:
+            - generic [ref=e211]: <br
+            - text: />
+          - text: API 通信 participant Process as process-message.ts
+          - generic [ref=e212]:
+            - generic [ref=e213]: <br
+            - text: />
+          - text: 消息处理 participant Send as send.ts/send-media.ts
+          - generic [ref=e214]:
+            - generic [ref=e215]: <br
+            - text: />
+          - text: 消息发送 participant CDN as cdn-upload.ts
+          - generic [ref=e216]:
+            - generic [ref=e217]: <br
+            - text: />
+          - text: "CDN 上传 User->>Weixin: 发送消息 Weixin->>API: getUpdates 长轮询 API->>Monitor: 返回消息列表 + 同步游标 Monitor->>Process: 路由消息 Process->>Process: 下载媒体（如需） Process->>Process: 解析命令 / Markdown Process->>Send: 生成响应 alt 媒体消息 Send->>API: getUploadUrl 获取预签名 URL API->>Send: 返回上传参数 Send->>CDN: 上传加密文件 CDN->>Send: 返回下载参数 Send->>API: sendMessage（含媒体） else 文本消息 Send->>API: sendMessage end API->>Weixin: 发送消息到微信 Weixin->>User: 接收响应 Monitor->>Monitor: 保存同步游标"
+        - text: mermaid
+      - paragraph [ref=e218]: 该流程体现了插件的高效性：通过长轮询减少轮询开销，通过同步游标保证消息不丢失，通过 CDN 预签名 URL 实现安全的媒体上传，通过上下文令牌缓存优化消息发送性能。
+      - paragraph [ref=e219]:
+        - text: "Sources:"
+        - link "src/monitor/monitor.ts" [ref=e220] [cursor=pointer]:
+          - /url: "#/src/monitor/monitor.ts?id=l1-l223"
+        - text: ","
+        - link "src/messaging/process-message.ts" [ref=e221] [cursor=pointer]:
+          - /url: "#/src/messaging/process-message.ts?id=l1-l100"
+        - text: ","
+        - link "src/cdn/cdn-upload.ts" [ref=e222] [cursor=pointer]:
+          - /url: "#/src/cdn/cdn-upload.ts?id=l1-l88"
+      - heading "依赖与运行环境" [level=2] [ref=e223]:
+        - link "依赖与运行环境" [ref=e224] [cursor=pointer]:
+          - /url: "#/?id=%e4%be%9d%e8%b5%96%e4%b8%8e%e8%bf%90%e8%a1%8c%e7%8e%af%e5%a2%83"
+      - paragraph [ref=e225]: 插件依赖以下核心库和技术栈：
+      - table [ref=e226]:
+        - rowgroup [ref=e227]:
+          - row "依赖项 版本 用途" [ref=e228]:
+            - columnheader "依赖项" [ref=e229]
+            - columnheader "版本" [ref=e230]
+            - columnheader "用途" [ref=e231]
+        - rowgroup [ref=e232]:
+          - row "openclaw 2026.3.23 插件 SDK，提供运行时、配置管理、通道接口" [ref=e233]:
+            - cell "openclaw" [ref=e234]:
+              - strong [ref=e235]: openclaw
+            - cell "2026.3.23" [ref=e236]
+            - cell "插件 SDK，提供运行时、配置管理、通道接口" [ref=e237]
+          - row "zod 4.3.6 配置 Schema 验证" [ref=e238]:
+            - cell "zod" [ref=e239]:
+              - strong [ref=e240]: zod
+            - cell "4.3.6" [ref=e241]
+            - cell "配置 Schema 验证" [ref=e242]
+          - row "qrcode-terminal 0.12.0 终端二维码显示" [ref=e243]:
+            - cell "qrcode-terminal" [ref=e244]:
+              - strong [ref=e245]: qrcode-terminal
+            - cell "0.12.0" [ref=e246]
+            - cell "终端二维码显示" [ref=e247]
+          - row "silk-wasm ^3.7.1 SILK 语音格式转码（dev 依赖）" [ref=e248]:
+            - cell "silk-wasm" [ref=e249]:
+              - strong [ref=e250]: silk-wasm
+            - cell "^3.7.1" [ref=e251]
+            - cell "SILK 语音格式转码（dev 依赖）" [ref=e252]
+      - paragraph [ref=e253]:
+        - text: 插件要求
+        - strong [ref=e254]: Node.js >=22
+        - text: 运行环境，并作为 ESM module 加载。构建工具使用 TypeScript 5.8+，测试框架采用 Vitest 3.1+。
+      - paragraph [ref=e255]:
+        - text: "Sources:"
+        - link "package.json" [ref=e256] [cursor=pointer]:
+          - /url: "#/package.json?id=l1-l60"
+      - heading "下一步学习路径" [level=2] [ref=e257]:
+        - link "下一步学习路径" [ref=e258] [cursor=pointer]:
+          - /url: "#/?id=%e4%b8%8b%e4%b8%80%e6%ad%a5%e5%ad%a6%e4%b9%a0%e8%b7%af%e5%be%84"
+      - paragraph [ref=e259]: 理解项目概览后，建议按照以下顺序深入学习各个模块：
+      - list [ref=e260]:
+        - listitem [ref=e261]:
+          - strong [ref=e262]:
+            - link "快速开始：安装与配置" [ref=e263] [cursor=pointer]:
+              - /url: "#/2-kuai-su-kai-shi-an-zhuang-yu-pei-zhi"
+          - text: "- 完成插件的安装、配置与首次登录"
+        - listitem [ref=e264]:
+          - strong [ref=e265]:
+            - link "扫码登录流程" [ref=e266] [cursor=pointer]:
+              - /url: "#/3-sao-ma-deng-lu-liu-cheng"
+          - text: "- 了解二维码登录的完整机制与实现细节"
+        - listitem [ref=e267]:
+          - strong [ref=e268]:
+            - link "多账号管理与隔离配置" [ref=e269] [cursor=pointer]:
+              - /url: "#/4-duo-zhang-hao-guan-li-yu-ge-chi-pei-zhi"
+          - text: "- 掌握多账号场景下的配置技巧"
+      - paragraph [ref=e270]: 如果希望深入理解架构设计，可以继续阅读：
+      - list [ref=e271]:
+        - listitem [ref=e272]:
+          - strong [ref=e273]:
+            - link "插件架构总览" [ref=e274] [cursor=pointer]:
+              - /url: "#/5-cha-jian-jia-gou-zong-lan"
+          - text: "- 了解插件的架构设计原则与扩展机制"
+        - listitem [ref=e275]:
+          - strong [ref=e276]:
+            - link "核心模块职责划分" [ref=e277] [cursor=pointer]:
+              - /url: "#/6-he-xin-mo-kuai-zhi-ze-hua-fen"
+          - text: "- 深入各核心模块的职责边界与交互方式"

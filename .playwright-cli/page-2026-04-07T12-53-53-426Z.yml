@@ -1,0 +1,11 @@
+- generic [active] [ref=e1]:
+  - link "View source on Github" [ref=e2] [cursor=pointer]:
+    - /url: https://github.com/binbin1213/openclaw-weixin-plugin
+    - img [ref=e3]
+  - main [ref=e7]:
+    - button "Menu" [ref=e8] [cursor=pointer]
+    - complementary [ref=e13]:
+      - heading "OpenClaw 微信插件" [level=1] [ref=e14]:
+        - link "OpenClaw 微信插件" [ref=e15] [cursor=pointer]:
+          - /url: /openclaw-weixin-plugin/
+    - article [ref=e18]
