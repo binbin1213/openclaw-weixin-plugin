@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw 微信插件文档</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root {
+      --theme-color: #07c160;
+    }
+    .sidebar-nav > ul > li > a {
+      font-weight: 600;
+      color: #333;
+    }
+    .sidebar-nav ul ul {
+      margin-left: 0.5em;
+    }
+    .markdown-section code {
+      background-color: #f6f8fa;
+    }
+    .markdown-section pre > code {
+      background-color: #f6f8fa;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">加载中...</div>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    window.$docsify = {
+      name: 'OpenClaw 微信插件',
+      repo: 'https://github.com/binbin1213/openclaw-weixin-plugin',
+      loadSidebar: '_sidebar.md',
+      subMaxLevel: 3,
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '没有结果!',
+        depth: 3
+      },
+      pagination: {
+        previousText: '上一页',
+        nextText: '下一页',
+        crossChapter: true
+      },
+      mermaid: {
+        theme: 'default'
+      }
+    };
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>
