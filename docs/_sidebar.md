@@ -1,49 +1,49 @@
 <!-- docs/_sidebar.md -->
 
 - 快速入门
-  - [项目概览](/zh/)
-  - [快速开始：安装与配置](/zh/2-kuai-su-kai-shi-an-zhuang-yu-pei-zhi)
-  - [扫码登录流程](/zh/3-sao-ma-deng-lu-liu-cheng)
-  - [多账号管理与隔离配置](/zh/4-duo-zhang-hao-guan-li-yu-ge-chi-pei-zhi)
+  - [项目概览](/)
+  - [快速开始：安装与配置](/2-kuai-su-kai-shi-an-zhuang-yu-pei-zhi)
+  - [扫码登录流程](/3-sao-ma-deng-lu-liu-cheng)
+  - [多账号管理与隔离配置](/4-duo-zhang-hao-guan-li-yu-ge-chi-pei-zhi)
 
 - 架构设计
   - 插件架构
-    - [插件架构总览](/zh/5-cha-jian-jia-gou-zong-lan)
-    - [核心模块职责划分](/zh/6-he-xin-mo-kuai-zhi-ze-hua-fen)
+    - [插件架构总览](/5-cha-jian-jia-gou-zong-lan)
+    - [核心模块职责划分](/6-he-xin-mo-kuai-zhi-ze-hua-fen)
   - 认证与授权
-    - [二维码登录机制](/zh/7-er-wei-ma-deng-lu-ji-zhi)
-    - [账号存储与管理](/zh/8-zhang-hao-cun-chu-yu-guan-li)
-    - [配对授权与白名单机制](/zh/9-pei-dui-shou-quan-yu-bai-ming-dan-ji-zhi)
+    - [二维码登录机制](/7-er-wei-ma-deng-lu-ji-zhi)
+    - [账号存储与管理](/8-zhang-hao-cun-chu-yu-guan-li)
+    - [配对授权与白名单机制](/9-pei-dui-shou-quan-yu-bai-ming-dan-ji-zhi)
   - API 通信协议
-    - [长轮询 getUpdates 实现](/zh/10-chang-lun-xun-getupdates-shi-xian)
-    - [消息发送 sendMessage API](/zh/11-xiao-xi-fa-song-sendmessage-api)
-    - [CDN 预签名 URL 获取与上传](/zh/12-cdn-yu-qian-ming-url-huo-qu-yu-shang-chuan)
-    - [会话状态管理与过期处理](/zh/13-hui-hua-zhuang-tai-guan-li-yu-guo-qi-chu-li)
+    - [长轮询 getUpdates 实现](/10-chang-lun-xun-getupdates-shi-xian)
+    - [消息发送 sendMessage API](/11-xiao-xi-fa-song-sendmessage-api)
+    - [CDN 预签名 URL 获取与上传](/12-cdn-yu-qian-ming-url-huo-qu-yu-shang-chuan)
+    - [会话状态管理与过期处理](/13-hui-hua-zhuang-tai-guan-li-yu-guo-qi-chu-li)
   - 媒体处理
-    - [CDN 上传与 AES-128-ECB 加密](/zh/14-cdn-shang-chuan-yu-aes-128-ecb-jia-mi)
-    - [媒体下载与解密](/zh/15-mei-ti-xia-zai-yu-jie-mi)
-    - [SILK 语音格式转码](/zh/16-silk-yu-yin-ge-shi-zhuan-ma)
-    - [MIME 类型识别](/zh/17-mime-lei-xing-shi-bie)
+    - [CDN 上传与 AES-128-ECB 加密](/14-cdn-shang-chuan-yu-aes-128-ecb-jia-mi)
+    - [媒体下载与解密](/15-mei-ti-xia-zai-yu-jie-mi)
+    - [SILK 语音格式转码](/16-silk-yu-yin-ge-shi-zhuan-ma)
+    - [MIME 类型识别](/17-mime-lei-xing-shi-bie)
   - 消息处理流程
-    - [入站消息路由与处理](/zh/18-ru-zhan-xiao-xi-lu-you-yu-chu-li)
-    - [Markdown 文本过滤](/zh/19-markdown-wen-ben-guo-lu)
-    - [斜杠命令支持](/zh/20-xie-gang-ming-ling-zhi-chi)
-    - [调试模式与链路追踪](/zh/21-diao-shi-mo-shi-yu-lian-lu-zhui-zong)
-    - [错误通知机制](/zh/22-cuo-wu-tong-zhi-ji-zhi)
+    - [入站消息路由与处理](/18-ru-zhan-xiao-xi-lu-you-yu-chu-li)
+    - [Markdown 文本过滤](/19-markdown-wen-ben-guo-lu)
+    - [斜杠命令支持](/20-xie-gang-ming-ling-zhi-chi)
+    - [调试模式与链路追踪](/21-diao-shi-mo-shi-yu-lian-lu-zhui-zong)
+    - [错误通知机制](/22-cuo-wu-tong-zhi-ji-zhi)
   - 存储与持久化
-    - [状态目录解析](/zh/23-zhuang-tai-mu-lu-jie-xi)
-    - [同步游标持久化](/zh/24-tong-bu-you-biao-chi-jiu-hua)
-    - [上下文令牌缓存与恢复](/zh/25-shang-xia-wen-ling-pai-huan-cun-yu-hui-fu)
+    - [状态目录解析](/23-zhuang-tai-mu-lu-jie-xi)
+    - [同步游标持久化](/24-tong-bu-you-biao-chi-jiu-hua)
+    - [上下文令牌缓存与恢复](/25-shang-xia-wen-ling-pai-huan-cun-yu-hui-fu)
   - 运行时与监控
-    - [长轮询监控循环实现](/zh/26-chang-lun-xun-jian-kong-xun-huan-shi-xian)
-    - [结构化日志系统](/zh/27-jie-gou-hua-ri-zhi-xi-tong)
-    - [OpenClaw 版本兼容性检查](/zh/28-openclaw-ban-ben-jian-rong-xing-jian-cha)
+    - [长轮询监控循环实现](/26-chang-lun-xun-jian-kong-xun-huan-shi-xian)
+    - [结构化日志系统](/27-jie-gou-hua-ri-zhi-xi-tong)
+    - [OpenClaw 版本兼容性检查](/28-openclaw-ban-ben-jian-rong-xing-jian-cha)
   - 配置管理
-    - [配置 Schema 定义](/zh/29-pei-zhi-schema-ding-yi)
-    - [配置缓存管理器](/zh/30-pei-zhi-huan-cun-guan-li-qi)
+    - [配置 Schema 定义](/29-pei-zhi-schema-ding-yi)
+    - [配置缓存管理器](/30-pei-zhi-huan-cun-guan-li-qi)
 
 - 协议规范
-  - [API 协议类型定义](/zh/31-api-xie-yi-lei-xing-ding-yi)
-  - [消息类型与状态码](/zh/32-xiao-xi-lei-xing-yu-zhuang-tai-ma)
-  - [请求头构建规范](/zh/33-qing-qiu-tou-gou-jian-gui-fan)
-  - [Base64 与 Hex 编码处理](/zh/34-base64-yu-hex-bian-ma-chu-li)
+  - [API 协议类型定义](/31-api-xie-yi-lei-xing-ding-yi)
+  - [消息类型与状态码](/32-xiao-xi-lei-xing-yu-zhuang-tai-ma)
+  - [请求头构建规范](/33-qing-qiu-tou-gou-jian-gui-fan)
+  - [Base64 与 Hex 编码处理](/34-base64-yu-hex-bian-ma-chu-li)
