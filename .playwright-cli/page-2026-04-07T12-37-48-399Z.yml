@@ -1,0 +1,20 @@
+- generic [active] [ref=e1]:
+  - link "View source on Github" [ref=e2] [cursor=pointer]:
+    - /url: https://github.com/binbin1213/openclaw-weixin-plugin
+    - img [ref=e3]
+  - main [ref=e7]:
+    - button "Menu" [ref=e8] [cursor=pointer]
+    - complementary [ref=e13]:
+      - heading "OpenClaw 微信插件" [level=1] [ref=e14]:
+        - link "OpenClaw 微信插件" [ref=e15] [cursor=pointer]:
+          - /url: /openclaw-weixin-plugin/
+    - article [ref=e18]:
+      - heading "OpenClaw 微信插件文档" [level=1] [ref=e19]:
+        - link "OpenClaw 微信插件文档" [ref=e20] [cursor=pointer]:
+          - /url: "#/?id=openclaw-%e5%be%ae%e4%bf%a1%e6%8f%92%e4%bb%b6%e6%96%87%e6%a1%a3"
+      - paragraph [ref=e21]:
+        - text: 访问
+        - link "https://binbin1213.github.io/openclaw-weixin-plugin/" [ref=e22] [cursor=pointer]:
+          - /url: https://binbin1213.github.io/openclaw-weixin-plugin/
+        - text: 查看完整文档。
+      - paragraph [ref=e23]: 本目录包含 OpenClaw 微信插件的完整技术文档，涵盖安装配置、架构设计、API 协议等所有内容。

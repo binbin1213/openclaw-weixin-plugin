@@ -1,0 +1,6 @@
+[    3743ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/prismjs/components/prism-mermaid.min.js:0
+[    3746ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js:0
+[    3753ms] ReferenceError: mermaid is not defined
+    at https://binbin1213.github.io/openclaw-weixin-plugin/:63:5
+[    4523ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://binbin1213.github.io/openclaw-weixin-plugin/_sidebar.md:0
+[    5561ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://binbin1213.github.io/favicon.ico:0

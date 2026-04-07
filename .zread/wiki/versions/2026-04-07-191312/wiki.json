@@ -1,0 +1,269 @@
+{
+  "id": "2026-04-07-191312",
+  "generated_at": "2026-04-07T11:13:12.404052Z",
+  "language": "zh",
+  "pages": [
+    {
+      "slug": "1-xiang-mu-gai-lan",
+      "title": "项目概览",
+      "file": "1-xiang-mu-gai-lan.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "2-kuai-su-kai-shi-an-zhuang-yu-pei-zhi",
+      "title": "快速开始：安装与配置",
+      "file": "2-kuai-su-kai-shi-an-zhuang-yu-pei-zhi.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "3-sao-ma-deng-lu-liu-cheng",
+      "title": "扫码登录流程",
+      "file": "3-sao-ma-deng-lu-liu-cheng.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "4-duo-zhang-hao-guan-li-yu-ge-chi-pei-zhi",
+      "title": "多账号管理与隔离配置",
+      "file": "4-duo-zhang-hao-guan-li-yu-ge-chi-pei-zhi.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "5-cha-jian-jia-gou-zong-lan",
+      "title": "插件架构总览",
+      "file": "5-cha-jian-jia-gou-zong-lan.md",
+      "section": "架构设计",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "6-he-xin-mo-kuai-zhi-ze-hua-fen",
+      "title": "核心模块职责划分",
+      "file": "6-he-xin-mo-kuai-zhi-ze-hua-fen.md",
+      "section": "架构设计",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "7-er-wei-ma-deng-lu-ji-zhi",
+      "title": "二维码登录机制",
+      "file": "7-er-wei-ma-deng-lu-ji-zhi.md",
+      "section": "架构设计",
+      "group": "认证与授权",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "8-zhang-hao-cun-chu-yu-guan-li",
+      "title": "账号存储与管理",
+      "file": "8-zhang-hao-cun-chu-yu-guan-li.md",
+      "section": "架构设计",
+      "group": "认证与授权",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "9-pei-dui-shou-quan-yu-bai-ming-dan-ji-zhi",
+      "title": "配对授权与白名单机制",
+      "file": "9-pei-dui-shou-quan-yu-bai-ming-dan-ji-zhi.md",
+      "section": "架构设计",
+      "group": "认证与授权",
+      "level": "Advanced"
+    },
+    {
+      "slug": "10-chang-lun-xun-getupdates-shi-xian",
+      "title": "长轮询 getUpdates 实现",
+      "file": "10-chang-lun-xun-getupdates-shi-xian.md",
+      "section": "架构设计",
+      "group": "API 通信协议",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "11-xiao-xi-fa-song-sendmessage-api",
+      "title": "消息发送 sendMessage API",
+      "file": "11-xiao-xi-fa-song-sendmessage-api.md",
+      "section": "架构设计",
+      "group": "API 通信协议",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "12-cdn-yu-qian-ming-url-huo-qu-yu-shang-chuan",
+      "title": "CDN 预签名 URL 获取与上传",
+      "file": "12-cdn-yu-qian-ming-url-huo-qu-yu-shang-chuan.md",
+      "section": "架构设计",
+      "group": "API 通信协议",
+      "level": "Advanced"
+    },
+    {
+      "slug": "13-hui-hua-zhuang-tai-guan-li-yu-guo-qi-chu-li",
+      "title": "会话状态管理与过期处理",
+      "file": "13-hui-hua-zhuang-tai-guan-li-yu-guo-qi-chu-li.md",
+      "section": "架构设计",
+      "group": "API 通信协议",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "14-cdn-shang-chuan-yu-aes-128-ecb-jia-mi",
+      "title": "CDN 上传与 AES-128-ECB 加密",
+      "file": "14-cdn-shang-chuan-yu-aes-128-ecb-jia-mi.md",
+      "section": "架构设计",
+      "group": "媒体处理",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "15-mei-ti-xia-zai-yu-jie-mi",
+      "title": "媒体下载与解密",
+      "file": "15-mei-ti-xia-zai-yu-jie-mi.md",
+      "section": "架构设计",
+      "group": "媒体处理",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "16-silk-yu-yin-ge-shi-zhuan-ma",
+      "title": "SILK 语音格式转码",
+      "file": "16-silk-yu-yin-ge-shi-zhuan-ma.md",
+      "section": "架构设计",
+      "group": "媒体处理",
+      "level": "Advanced"
+    },
+    {
+      "slug": "17-mime-lei-xing-shi-bie",
+      "title": "MIME 类型识别",
+      "file": "17-mime-lei-xing-shi-bie.md",
+      "section": "架构设计",
+      "group": "媒体处理",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "18-ru-zhan-xiao-xi-lu-you-yu-chu-li",
+      "title": "入站消息路由与处理",
+      "file": "18-ru-zhan-xiao-xi-lu-you-yu-chu-li.md",
+      "section": "架构设计",
+      "group": "消息处理流程",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "19-markdown-wen-ben-guo-lu",
+      "title": "Markdown 文本过滤",
+      "file": "19-markdown-wen-ben-guo-lu.md",
+      "section": "架构设计",
+      "group": "消息处理流程",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "20-xie-gang-ming-ling-zhi-chi",
+      "title": "斜杠命令支持",
+      "file": "20-xie-gang-ming-ling-zhi-chi.md",
+      "section": "架构设计",
+      "group": "消息处理流程",
+      "level": "Beginner"
+    },
+    {
+      "slug": "21-diao-shi-mo-shi-yu-lian-lu-zhui-zong",
+      "title": "调试模式与链路追踪",
+      "file": "21-diao-shi-mo-shi-yu-lian-lu-zhui-zong.md",
+      "section": "架构设计",
+      "group": "消息处理流程",
+      "level": "Advanced"
+    },
+    {
+      "slug": "22-cuo-wu-tong-zhi-ji-zhi",
+      "title": "错误通知机制",
+      "file": "22-cuo-wu-tong-zhi-ji-zhi.md",
+      "section": "架构设计",
+      "group": "消息处理流程",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "23-zhuang-tai-mu-lu-jie-xi",
+      "title": "状态目录解析",
+      "file": "23-zhuang-tai-mu-lu-jie-xi.md",
+      "section": "架构设计",
+      "group": "存储与持久化",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "24-tong-bu-you-biao-chi-jiu-hua",
+      "title": "同步游标持久化",
+      "file": "24-tong-bu-you-biao-chi-jiu-hua.md",
+      "section": "架构设计",
+      "group": "存储与持久化",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "25-shang-xia-wen-ling-pai-huan-cun-yu-hui-fu",
+      "title": "上下文令牌缓存与恢复",
+      "file": "25-shang-xia-wen-ling-pai-huan-cun-yu-hui-fu.md",
+      "section": "架构设计",
+      "group": "存储与持久化",
+      "level": "Advanced"
+    },
+    {
+      "slug": "26-chang-lun-xun-jian-kong-xun-huan-shi-xian",
+      "title": "长轮询监控循环实现",
+      "file": "26-chang-lun-xun-jian-kong-xun-huan-shi-xian.md",
+      "section": "架构设计",
+      "group": "运行时与监控",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "27-jie-gou-hua-ri-zhi-xi-tong",
+      "title": "结构化日志系统",
+      "file": "27-jie-gou-hua-ri-zhi-xi-tong.md",
+      "section": "架构设计",
+      "group": "运行时与监控",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "28-openclaw-ban-ben-jian-rong-xing-jian-cha",
+      "title": "OpenClaw 版本兼容性检查",
+      "file": "28-openclaw-ban-ben-jian-rong-xing-jian-cha.md",
+      "section": "架构设计",
+      "group": "运行时与监控",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "29-pei-zhi-schema-ding-yi",
+      "title": "配置 Schema 定义",
+      "file": "29-pei-zhi-schema-ding-yi.md",
+      "section": "架构设计",
+      "group": "配置管理",
+      "level": "Beginner"
+    },
+    {
+      "slug": "30-pei-zhi-huan-cun-guan-li-qi",
+      "title": "配置缓存管理器",
+      "file": "30-pei-zhi-huan-cun-guan-li-qi.md",
+      "section": "架构设计",
+      "group": "配置管理",
+      "level": "Advanced"
+    },
+    {
+      "slug": "31-api-xie-yi-lei-xing-ding-yi",
+      "title": "API 协议类型定义",
+      "file": "31-api-xie-yi-lei-xing-ding-yi.md",
+      "section": "协议规范",
+      "level": "Advanced"
+    },
+    {
+      "slug": "32-xiao-xi-lei-xing-yu-zhuang-tai-ma",
+      "title": "消息类型与状态码",
+      "file": "32-xiao-xi-lei-xing-yu-zhuang-tai-ma.md",
+      "section": "协议规范",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "33-qing-qiu-tou-gou-jian-gui-fan",
+      "title": "请求头构建规范",
+      "file": "33-qing-qiu-tou-gou-jian-gui-fan.md",
+      "section": "协议规范",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "34-base64-yu-hex-bian-ma-chu-li",
+      "title": "Base64 与 Hex 编码处理",
+      "file": "34-base64-yu-hex-bian-ma-chu-li.md",
+      "section": "协议规范",
+      "level": "Advanced"
+    }
+  ]
+}
